@@ -30,6 +30,8 @@ export default class App extends Component {
                 return <Cinema />;
             case 2:
                 return <Mine />;
+            default:
+                return null;
         }
     }
 
