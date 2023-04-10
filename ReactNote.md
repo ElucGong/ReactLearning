@@ -141,13 +141,13 @@ class ...{
 
 ### 11. 新生命周期
 
-1. getDerivedStateFromProps(nextProps, nextState) 
+1. getDerivedStateFromProps(nextProps, nextState)  替代willMount和willReceiveProps
 
    **根据props设置state，要加static关键字，为类方法，所以用不了this，获取不到之前的状态**
    
    第一次的初始化组件以及后续的更新过程中(包括自身状态更新以及父重新渲染子、给子传属性) ，返回一个对象作为新的state，返回null则说明不需要在这里更新state，但axios请求不放在这里，因为return立即执行而axios需要等数据返回，所以axios放在componentDidUpdate里 
    
-2. getSnapshotBeforeUpdate
+2. getSnapshotBeforeUpdate 替代willUpdate
 
    在真正update前的一瞬间，return value可以在componentDidUpdate(prevProps, prevState, value)中获取
 
