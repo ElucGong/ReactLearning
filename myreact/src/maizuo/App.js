@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Film from './component/Film';
-import Cinema from './component/Cinema';
+import Cinema from './component/Cinema-函数式组件';
 import Mine from './component/Mine';
 import './css/App.css'
 
